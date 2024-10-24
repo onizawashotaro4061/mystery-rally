@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import StoryComponent from '@/app/components/StoryComponent';
 
 const QuizCourseA: React.FC = () => {
-  const [hasParticipated, setHasParticipated] = useState<boolean | null>(null);
+  const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
   const correctKeyword = '読み聞かせ';

@@ -40,21 +40,23 @@ export default function ClickLink() {
       textAlign: 'center',
       color: '#fff',
       padding: '0 20px',
-          }}>
+    }}>
       <Image 
-      src="/images/logo_transparent.png"
-      width={300}
-      height={300}
-       alt="Example Image"
-       style={{
+        src="/images/logo_transparent.png"
+        width={300}
+        height={300}
+        alt="Example Image"
+        style={{
           width: '100%',
           maxWidth: '600px',
-          marginBottom: '20px' }} />
-      <a href="/click-counter" onClick={handleLinkClick} style={{ textDecoration: 'none' }}>
+          marginBottom: '20px'
+        }} 
+      />
+      <a href="/click-counter" style={{ textDecoration: 'none' }} onClick={handleLinkClick}>
         <button style={{
           fontSize: '24px',
           padding: '15px 50px',
-          backgroundColor: '#ff3333', // 明るい赤に変更
+          backgroundColor: '#b22222', // 明るい赤に変更
           color: '#ffcccc',           // テキストの明るい赤
           border: '2px solid #ff5555',
           borderRadius: '8px',

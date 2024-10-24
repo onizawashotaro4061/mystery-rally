@@ -65,13 +65,16 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
     <div>
       {hasParticipated === null ? (
         <div>
-           <p>{`${participationLabel}に参加しましたか？`}</p> {/* ここを修正 */}
+           <p style={{color: 'black'}}>{`${participationLabel}に参加しましたか？`}</p> {/* ここを修正 */}
           <ClickButton
             label="参加した"
             onClick={() => handleParticipation(true)}
             count={0}
             color='red'
           />
+          <div style={{
+            marginBottom: '20px',
+          }}></div>
           <ClickButton
             label="参加していない"
             onClick={() => handleParticipation(false)}
@@ -81,7 +84,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
         </div>
       ) : (
         <div>
-          <p>キーワードを入力してください。</p>
+          <p style={{color: 'black'}}>キーワードを入力してください。</p>
           <input
             type="text"
             value={keyword}

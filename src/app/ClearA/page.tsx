@@ -8,8 +8,8 @@ import ClearScreen from '../components/ClearScreen';
 
 const ClearPage = () => {
     const router = useRouter();
-    const [score, setScore] = useState(0);
-    const [totalQuestions, setTotalQuestions] = useState(10); // 例として10問と仮定
+    const [, setScore] = useState(0);
+    const [totalQuestions, ] = useState(10); // 例として10問と仮定
 
     useEffect(() => {
         // スコアを取得するロジックをここに追加

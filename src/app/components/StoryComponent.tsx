@@ -54,7 +54,9 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   };
 
   return (
-     <div style={{ textAlign: 'center', padding: '20px', height: '100vh'}}>
+     <div style={{ textAlign: 'center', 
+     background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',
+     padding: '20px', height: '100vh'}}>
       <OverlayImageComponent
         baseImage={stories[currentStoryIndex].image}
         overlayImage={stories[currentStoryIndex].overlayImage}
