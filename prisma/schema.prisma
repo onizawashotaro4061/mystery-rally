@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // 環境変数を使っている場合
+}
+
+// schema.prisma
+
+model Click {
+  id        Int      @id @default(autoincrement())
+  course    String   @default("default_course") // デフォルト値を設定
+  count     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model KeywordAttempt {
+  id      Int     @id @default(autoincrement())
+  course  String  @default("default_course") // デフォルト値を設定
+  step    Int
+  attempts Int    @default(0)
+}
+
+
+model Participation {
+  id     Int    @id @default(autoincrement()) // 一意のIDを持つ
+  course  String @default("default_course") // デフォルト値を設定
+  step   Int    // ステップ番号（問題の番号）
+  count  Int    @default(0) // クリック数のカウント
+}
+
+model GenderAge {
+  id      Int     @id @default(autoincrement())
+  gender  String  // "男性" or "女性"
+  age     Int
+}
+
+model ClickCounts {
+  id           Int      @id @default(autoincrement())
+  course       String
+  label        String
+  correctClick Boolean
+}
+
+
