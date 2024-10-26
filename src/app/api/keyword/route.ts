@@ -1,5 +1,5 @@
 // src/pages/api/keywords.ts
-
+export const runtime = 'edge';
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
