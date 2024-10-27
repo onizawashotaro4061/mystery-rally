@@ -1,9 +1,6 @@
 // src/app/api/click/route.ts
-export const runtime = 'edge';
 
-export const config = {
-  runtime: 'nodejs',
-};
+export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
